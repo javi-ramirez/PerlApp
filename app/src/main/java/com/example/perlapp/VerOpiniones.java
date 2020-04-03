@@ -28,7 +28,6 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.text.DateFormat;
-import java.text.SimpleDateFormat;
 import java.util.Date;
 
 import static android.view.View.GONE;
@@ -106,7 +105,7 @@ public class VerOpiniones extends AppCompatActivity {
         params.put("fecha_hora", fecha_hora);
         params.put("fk_idcamion", fk_idcamion);
 
-        //Calling the create usuario API
+        //Calling the create Comentario API
         PerformNetworkRequest request = new PerformNetworkRequest(Api.URL_CREATE_COMENTARIO, params, CODE_POST_REQUEST);
         request.execute();
 
@@ -173,11 +172,11 @@ public class VerOpiniones extends AppCompatActivity {
         request.execute();
     }
 
-    private void refreshComentarioList(JSONArray usuario) throws JSONException {
+    private void refreshComentarioList(JSONArray comentario) throws JSONException {
         comentarioList.clear();
 
-        for (int i = 0; i < usuario.length(); i++) {
-            JSONObject obj = usuario.getJSONObject(i);
+        for (int i = 0; i < comentario.length(); i++) {
+            JSONObject obj = comentario.getJSONObject(i);
 
             comentarioList.add(new ComentarioBD(
                     obj.getInt("idcomentario"),
@@ -216,7 +215,7 @@ public class VerOpiniones extends AppCompatActivity {
                 JSONObject object = new JSONObject(s);
                 if (!object.getBoolean("error")) {
                     Toast.makeText(getApplicationContext(), object.getString("message"), Toast.LENGTH_SHORT).show();
-                    refreshComentarioList(object.getJSONArray("usuario"));
+                    refreshComentarioList(object.getJSONArray("comentario"));
                 }
             } catch (JSONException e) {
                 e.printStackTrace();
@@ -261,6 +260,7 @@ public class VerOpiniones extends AppCompatActivity {
             final ComentarioBD comentario = comentarioList.get(position);
 
             textViewName.setText(comentario.getCreador());
+            textViewComentary.setText(comentario.getComentario());
 
             textViewUpdate.setOnClickListener(new View.OnClickListener() {
                 @Override
