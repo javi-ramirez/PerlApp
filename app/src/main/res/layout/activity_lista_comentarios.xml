@@ -53,14 +53,14 @@
 
         </RelativeLayout>
 
-        <TextView
+        <EditText
             android:id="@+id/textViewComentary"
             android:layout_width="wrap_content"
-            android:layout_height="309dp"
-            android:layout_alignParentLeft="true"
-            android:layout_weight="8"
-            android:text="Holadfdfsdfsdfsdf"
-            android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium" />
+            android:layout_height="wrap_content"
+            android:gravity="start|top"
+            android:inputType="textMultiLine"
+            android:backgroundTint="@android:color/transparent"
+            android:text="Este es un texto ejemplo de como se vería un comentario dentro de la App" />
 
     </LinearLayout>
 

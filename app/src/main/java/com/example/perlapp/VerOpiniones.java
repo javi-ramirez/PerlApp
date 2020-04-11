@@ -255,7 +255,7 @@ public class VerOpiniones extends AppCompatActivity {
             TextView textViewName = listViewItem.findViewById(R.id.textViewName);
             TextView textViewUpdate = listViewItem.findViewById(R.id.textViewUpdate);
             TextView textViewDelete = listViewItem.findViewById(R.id.textViewDelete);
-            TextView textViewComentary = listViewItem.findViewById(R.id.textViewComentary);
+            EditText textViewComentary = listViewItem.findViewById(R.id.textViewComentary);
 
             final ComentarioBD comentario = comentarioList.get(position);
 
@@ -280,7 +280,7 @@ public class VerOpiniones extends AppCompatActivity {
 
                     AlertDialog.Builder builder = new AlertDialog.Builder(VerOpiniones.this);
 
-                    builder.setTitle("Eliminar " + comentario.getCreador())
+                    builder.setTitle("Eliminar el comentario de " + comentario.getCreador())
                             .setMessage("¿Estas seguro que deseas eliminarlo?")
                             .setPositiveButton(android.R.string.yes, new DialogInterface.OnClickListener() {
                                 public void onClick(DialogInterface dialog, int which) {
