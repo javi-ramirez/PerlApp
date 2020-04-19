@@ -81,8 +81,9 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:ems="10"
-                android:inputType="textPersonName"
                 android:text="Escriba su comentario"
+                android:gravity="start|top"
+                android:inputType="textMultiLine"
                 android:textSize="24sp" />
 
             <TextView
@@ -104,6 +105,8 @@
                 android:layout_height="188dp"
                 android:layout_marginTop="10dp"
                 android:scrollbars="vertical"
+                android:gravity="start|top"
+                android:inputType="textMultiLine"
                 app:layout_constraintTop_toBottomOf="@+id/scrollView3"
                 tools:ignore="MissingConstraints" />
 

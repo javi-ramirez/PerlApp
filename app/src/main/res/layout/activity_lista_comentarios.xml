@@ -53,14 +53,22 @@
 
         </RelativeLayout>
 
-        <EditText
-            android:id="@+id/textViewComentary"
-            android:layout_width="wrap_content"
+        <RelativeLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:gravity="start|top"
-            android:inputType="textMultiLine"
-            android:backgroundTint="@android:color/transparent"
-            android:text="Este es un texto ejemplo de como se vería un comentario dentro de la App" />
+            android:orientation="horizontal"
+            android:padding="8dp">
+
+            <EditText
+                android:id="@+id/textViewComentary"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@android:color/transparent"
+                android:gravity="start|top"
+                android:inputType="textMultiLine"
+                android:text="Este es un texto ejemplo de como se vería un comentario dentro de la App" />
+
+        </RelativeLayout>
 
     </LinearLayout>
 

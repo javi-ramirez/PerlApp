@@ -267,9 +267,9 @@ public class VerOpiniones extends AppCompatActivity {
                 public void onClick(View view) {
                     isUpdating = true;
                     idComen = comentario.getIdcomentario();
-                    txtNombreUsuario.setText(comentario.getComentario());
-                    txtComentario.setText(comentario.getComentario());
-                    txtNumCamion.setText(comentario.getFk_idcamion());
+                    txtNombreUsuario.setText(""+comentario.getCreador());
+                    txtComentario.setText(""+comentario.getComentario());
+                    txtNumCamion.setText(""+comentario.getFk_idcamion());
                     btnEnviar.setText("Actualizar");
                 }
             });
