@@ -72,12 +72,11 @@ public class VerOpiniones extends AppCompatActivity {
     }
 
     private void createComentario() {
-//        Date date = new Date();
-//        DateFormat fecha = new SimpleDateFormat("dd/MM/yyyy HH:mm:ss ");
+        DateFormat fecha = new SimpleDateFormat("yyyy/MM/dd HH:mm:ss");
         String creador = txtNombreUsuario.getText().toString().trim();
         String comentario = txtComentario.getText().toString().trim();
         String fk_idcamion = txtNumCamion.getText().toString().trim();
-        String fecha_hora = "";
+        String fecha_hora = fecha.toString();
 
         //validating the inputs
         if (TextUtils.isEmpty(fk_idcamion)) {
@@ -121,7 +120,7 @@ public class VerOpiniones extends AppCompatActivity {
 
     private void updateComentario() {
         Date date = new Date();
-        DateFormat fecha = new SimpleDateFormat("dd/MM/yyyy HH:mm:ss ");
+        DateFormat fecha = new SimpleDateFormat("yyyy/MM/dd HH:mm:ss ");
         int idComentario = idComen;
         String creador = txtNombreUsuario.getText().toString().trim();
         String comentario = txtComentario.getText().toString().trim();
