@@ -14,6 +14,7 @@ public class MainActivity extends AppCompatActivity {
     //okey no jalaa
     //sigue sin jalar
     //intento 123
+    //La cuarentena es un lujo de la elite.
 
 
     EditText edtNombreUsuario;
