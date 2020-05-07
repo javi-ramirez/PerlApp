@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Agregar Usuario</title>
+
+	
+	<!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/7.14.1/firebase-app.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+<script src="https://www.gstatic.com/firebasejs/7.14.1/firebase-analytics.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.14.1/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.14.1/firebase-firestore.js"></script>
+
+
+<script>
+  // Your web app's Firebase configuration
+  var firebaseConfig = {
+    apiKey: "AIzaSyC7OGgyyFDYjGSpnGv5ZOED9lXwUV1IyEw",
+    authDomain: "perlapp-25536.firebaseapp.com",
+    databaseURL: "https://perlapp-25536.firebaseio.com",
+    projectId: "perlapp-25536",
+    storageBucket: "perlapp-25536.appspot.com",
+    messagingSenderId: "655163858448",
+    appId: "1:655163858448:web:f43565bca9fdb4d157f495",
+    measurementId: "G-2S4TQVZXB4"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  firebase.analytics();
+</script>
+
+
+<body>
+	<input id="email" type="email" placeholder="Ingresa tu email">
+	<input id="contrasena" type="password" placeholder="Ingresa tu contrasena">
+	<button onclick="registrar()">Enviar</button>
+	<script src="funciones.js"></script>
+</body>
+</head>
+</html>

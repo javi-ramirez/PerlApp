@@ -1,0 +1,92 @@
+body
+{
+	background-color: #FFFFFF;font-family: Arial;margin: 0
+}
+form
+{
+	background-color: #EEE8E8;
+	padding: 20px;
+	font-size: 18px;
+	border-radius:5px;
+	margin: 0  auto;
+	width: 300px;
+}
+img
+{
+	width: 40px;
+	height: 40px;
+}
+.field
+{
+	width: 280px; 
+}
+.center-content
+{
+	text-align: center;	
+}
+#menu
+{
+	background-color: #910BCF;
+	padding-top: 10px;
+	padding-left: 10px;
+	padding-right: 10px;
+}
+#menu ul
+{
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+#menu ul li
+{
+	display: inline-block;
+}
+#menu ul li a
+{
+	color: white;
+	display: block;
+	padding: 15px 90px;
+	text-decoration: none;
+}
+#menu ul li a:hover
+{
+	background-color: #42B881;
+}
+#fuente
+{
+	font-size: 16px;
+}
+.input
+{
+	height: 16px
+}
+.Table
+{
+    display: table;
+    background-color: #EEE8E8;
+	padding: 20px;
+	font-size: 18px;
+	border-radius:5px;
+	margin: 0  auto;
+	width: 300px;
+}
+.Heading
+{
+    display: table-row;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+}
+.Row
+{
+    display: table-row;
+}
+.Cell
+{
+    display: table-cell;
+    border: solid #EFEDEA;
+    border-width: medium;
+    border-radius:5px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
