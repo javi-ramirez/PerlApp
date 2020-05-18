@@ -4,10 +4,13 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.FragmentActivity;
 
+import android.content.Intent;
 import android.graphics.Camera;
 import android.location.Location;
 import android.location.LocationListener;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
 import android.widget.Toast;
 
 import com.firebase.geofire.GeoFire;
@@ -41,10 +44,21 @@ public class Mapa extends FragmentActivity implements OnMapReadyCallback, Google
         GoogleApiClient mGoogleApiClient;
         Location mLastLocation;
         LocationRequest mLocationRequest;
+        Button btnVer;
         private Marker camionMarker;
 
         @Override
-        protected void onCreate(Bundle savedInstanceState) {
+        protected void onCreate(Bundle savedInstanceState)
+        {
+                btnVer=(Button) findViewById(R.id.btnVer);
+                btnVer.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View v)
+                        {
+                                Intent btnVer=new Intent(Mapa.this,VerOpiniones.class);
+                                startActivity(btnVer);
+                        }
+                });
                 super.onCreate(savedInstanceState);
                 setContentView(R.layout.activity_mapa);
                 // Obtain the SupportMapFragment and get notified when the map is ready to be used.
