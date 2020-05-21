@@ -65,7 +65,7 @@
       //document.write(uid);
     $.ajax({
         type:"POST",
-        url:"registrar.php",
+        url:"registrar.php, consultar.php",
         data:{nombreJS, uidJS},
         success:function(r){
           if(r==1){
