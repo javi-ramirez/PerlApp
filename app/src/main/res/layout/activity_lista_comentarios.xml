@@ -48,6 +48,12 @@
 
         </RelativeLayout>
 
+        <Button
+            android:id="@+id/btnagregar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Agregar Comentario" />
+
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,10 +1,7 @@
 package com.example.perlapp;
 
-import androidx.appcompat.app.AppCompatActivity;
-import android.os.Bundle;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
-import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.text.TextUtils;
@@ -19,16 +16,18 @@ import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import androidx.appcompat.app.AppCompatActivity;
+
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.HashMap;
 import java.util.List;
-import java.text.DateFormat;
-import java.util.Date;
 
 import static android.view.View.GONE;
 
@@ -56,6 +55,9 @@ public class VerOpiniones extends AppCompatActivity {
         progressBar = (ProgressBar) findViewById(R.id.progressBar);
         listView = (ListView) findViewById(R.id.listViewComentario);
         comentarioList = new ArrayList<>();
+
+
+
 
         btnEnviar.setOnClickListener(new View.OnClickListener() {
             @Override
