@@ -9,6 +9,7 @@
     <script src="https://www.gstatic.com/firebasejs/7.14.1/firebase-analytics.js"></script>
     <script src="https://www.gstatic.com/firebasejs/7.14.1/firebase-auth.js"></script>
     <script src="https://www.gstatic.com/firebasejs/7.14.1/firebase-firestore.js"></script>
+    <link rel="stylesheet" type="text/css" href="../estilos.css">
     <script>
       // Your web app's Firebase configuration
       var firebaseConfig = 
@@ -30,6 +31,16 @@
   </head>
 
   <body>
+    <div id="menu">
+    <ul>
+      <img src="../Blanco.png">
+      <li><a href="#">Inicio</a></li>
+      <li><a href="index.php">Chofer</a></li>
+      <li><a href="http://localhost/PerlApp/PerlAppWeb/agregarRuta.php">Ruta</a></li>
+      <li><a href="http://localhost/PerlApp/PerlAppWeb/agregarCamion.php">Camión</a></li>
+      <li><a href="#">Historial</a></li>
+    </ul>   
+  </div>
      <input id="nombre" type="text" placeholder="Ingresa tu nombre">
     <input id="email" type="email" placeholder="Ingresa tu email">
     <input id="contrasena" type="password" placeholder="Ingresa tu contrasena">
@@ -65,7 +76,7 @@
       //document.write(uid);
     $.ajax({
         type:"POST",
-        url:"registrar.php, consultar.php",
+        url:"registrar.php",
         data:{nombreJS, uidJS},
         success:function(r){
           if(r==1){

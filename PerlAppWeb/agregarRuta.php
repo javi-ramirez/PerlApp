@@ -12,7 +12,7 @@
 		<ul>
 			<img src="Blanco.png">
 			<li><a href="inicio.php">Inicio</a></li>
-			<li><a href="agregarChofer.php">Chofer</a></li>
+			<li><a href="firebase/index.php">Chofer</a></li>
 			<li><a href="agregarRuta.php">Ruta</a></li>
 			<li><a href="agregarCamion.php">Camión</a></li>
 			<li><a href="#">Historial</a></li>
