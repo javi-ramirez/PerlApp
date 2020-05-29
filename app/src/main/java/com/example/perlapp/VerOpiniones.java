@@ -56,9 +56,6 @@ public class VerOpiniones extends AppCompatActivity {
         listView = (ListView) findViewById(R.id.listViewComentario);
         comentarioList = new ArrayList<>();
 
-
-
-
         btnEnviar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -243,7 +240,7 @@ public class VerOpiniones extends AppCompatActivity {
         List<ComentarioBD> comentarioList;
 
         public ComentarioAdapter(List<ComentarioBD>
-                                      comentarioList) {
+                                         comentarioList) {
             super(VerOpiniones.this, R.layout.activity_lista_comentarios, comentarioList);
             this.comentarioList = comentarioList;
         }

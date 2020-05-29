@@ -71,7 +71,7 @@ public class Mapa extends FragmentActivity implements OnMapReadyCallback, Google
             @Override
             public void onClick(View v)
             {
-                Intent btnVer=new Intent(Mapa.this,listaComentarios.class);
+                Intent btnVer=new Intent(Mapa.this,VerOpiniones.class);
                 startActivity(btnVer);
             }
         });
