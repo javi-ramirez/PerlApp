@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+<meta charset="utf-8">
   <head>
     <title>Agregar Usuario</title>
       
@@ -41,10 +42,20 @@
       <li><a href="#">Historial</a></li>
     </ul>   
   </div>
-     <input id="nombre" type="text" placeholder="Ingresa tu nombre">
-    <input id="email" type="email" placeholder="Ingresa tu email">
-    <input id="contrasena" type="password" placeholder="Ingresa tu contrasena">
+  <div class="center-content" > 
+  <p>Agregar Chofer</p>
+  </div>
+  <form>
+    <p id="fuente">Nombre:</p>
+    <input class="field input" id="nombre" type="text">
+    <p id="fuente">Correo:</p>
+    <input class="field input" id="email" type="email">
+    <p id="fuente">Contraseña:</p>
+    <input class="field input" id="contrasena" type="password">
+    <br><br>
     <button onclick="registrar()">Enviar</button>
+  </form>
+     
   </body>
 </html>
 
