@@ -1,14 +1,15 @@
 package com.example.perlapp;
 
-import android.os.StrictMode;
 import android.database.SQLException;
+import android.os.StrictMode;
+
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.ResultSet;
-import java.sql.Statement;
 
-public class MySQL
-{
+import java.sql.Statement;
+public class MySQL {
+
     static String host      = "108.167.151.42";
     static String baseDatos = "lavivesh_perlapp";
     static String usuario   = "lavivesh_PerlApp";

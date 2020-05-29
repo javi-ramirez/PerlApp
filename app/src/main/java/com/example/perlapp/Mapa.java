@@ -248,6 +248,7 @@ public class Mapa extends FragmentActivity implements OnMapReadyCallback, Google
                     map.clear();
 
                     camionMarker = mMap.addMarker(new MarkerOptions().position(camionLatLon).title(marcador));
+                    camionMarker.getTag();
                     camionMarker.showInfoWindow();
                 }
             }
