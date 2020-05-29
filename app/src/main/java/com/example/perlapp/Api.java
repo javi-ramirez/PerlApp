@@ -2,7 +2,7 @@ package com.example.perlapp;
 
 public class Api
 {
-    private static final String ROOT_URL = "http://192.168.137.1/PerlApp/v1/Api.php?apicall=";
+    private static final String ROOT_URL = "http://perlapp.laviveshop.com/PerlApp/v1/Api.php?apicall=";
 
     //URLs para conexión con el archivo API del servidor para cada case dentro del switch
 
