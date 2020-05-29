@@ -12,6 +12,7 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.FragmentActivity;
 
+import com.android.volley.AuthFailureError;
 import com.android.volley.Request;
 import com.android.volley.RequestQueue;
 import com.android.volley.Response;
@@ -44,7 +45,9 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.sql.ResultSet;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 public class Mapa extends FragmentActivity implements OnMapReadyCallback, GoogleApiClient.ConnectionCallbacks,GoogleApiClient.OnConnectionFailedListener, com.google.android.gms.location.LocationListener {
 
@@ -179,7 +182,7 @@ public class Mapa extends FragmentActivity implements OnMapReadyCallback, Google
                 toast.show();
             }
         });}
-    protected void getUbicacionCamion(String key, final String Url){
+    protected void getUbicacionCamion(final String key, final String Url){
 
         DatabaseReference camionLocationRef = FirebaseDatabase.getInstance().getReference().child("Chofer").child(key).child("l");
         Log.d("Chofer", key);
@@ -205,12 +208,10 @@ public class Mapa extends FragmentActivity implements OnMapReadyCallback, Google
 
                                     for (int i = 0; i < jsonArray.length(); i++) {
                                         JSONObject jsonObject = jsonArray.getJSONObject(i);
+                                        String numero = jsonObject.getString("numero");
                                         String nombreRuta = jsonObject.getString("nombre_ruta");
-                                        String nombreChofer = jsonObject.getString("nombre_chofer");
 
-                                        marcador = nombreChofer + "\n" + nombreRuta;
-                                        Log.d("ese", nombreChofer);
-                                        Log.d("eso",marcador);
+                                        marcador = numero + "-" + nombreRuta;
                                     }
                                 } catch (JSONException e) {
                                     e.printStackTrace();
@@ -221,7 +222,12 @@ public class Mapa extends FragmentActivity implements OnMapReadyCallback, Google
                             public void onErrorResponse(VolleyError error) {
 
                             }
-                        }){};
+                        }){@Override
+                        protected Map<String, String> getParams() throws AuthFailureError {
+                            Map<String,String> parametros = new HashMap<String, String>();
+                            parametros.put("iud",key.toString());
+                            return parametros;
+                        }};
                         RequestQueue requestQueue = Volley.newRequestQueue(getApplicationContext());
                         requestQueue.add(stringRequest);
                     }
